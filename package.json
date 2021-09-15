@@ -3,12 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandobhz/heroku-create.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernandobhz/heroku-create/issues"
+  },
+  "homepage": "https://github.com/fernandobhz/heroku-create#readme",
   "dependencies": {
     "ini": "^2.0.0"
   }

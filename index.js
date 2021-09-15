@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const fs = require(`fs/promises`);
 const path = require(`path`);
 const INI = require(`ini`);
@@ -31,31 +32,6 @@ async function buildAppName() {
 
   const herokuAppName = `${projectName}-${userName}`;
   return herokuAppName;
-
-  // const packageJsonPath = path.join(process.cwd(), `package.json`);
-  // const packageJsonContent = await fs.readFile(packageJsonPath, `utf8`);
-  // const packageJson = JSON.parse(packageJsonContent);
-  // const { name: appName, repository } = packageJson;
-
-  // if (repository) {
-  //   const { url: repositoryUrl } = repository;
-  //   const repositoryUrlParts = repositoryUrl.split(`/`).reverse();
-  //   const [projectName, userName] = repositoryUrlParts;
-
-  //   const herokuAppName = `${projectName}-${userName}`;
-  //   return herokuAppName;
-  // }
-
-  // const { USERNAME: windowsUserName } = process.env;
-
-  // if (windowsUserName) {
-  //   const herokuAppName = `${appName}-${windowsUserName}`;
-  //   return herokuAppName;
-  // }
-
-  // const randomChars = Math.random().toString(36).slice(-5);
-  // const herokuAppName = `${appName}-${randomChars}`;
-  // return herokuAppName;
 }
 
 async function run() {
