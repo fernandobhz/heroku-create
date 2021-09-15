@@ -30,7 +30,7 @@ async function buildAppName() {
   const originUrlParts = originUrl.split(`/`).reverse();
   const [projectName, userName] = originUrlParts;
 
-  const herokuAppName = `${projectName}-${userName}`;
+  const herokuAppName = `${projectName}-${userName}`.replace(/\./g, `-`).slice(0, 30);
   return herokuAppName;
 }
 
